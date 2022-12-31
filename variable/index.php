@@ -30,5 +30,81 @@
      Affichez la variable avec echo en utilisant la fonction strtoupper pour mettre le nom de l'animal en majuscules.
 -->
 
+
+<?php
+
+//exo1------------------------------------
+$nom = "Didier";
+echo $nom;
+
+?><br><?php
+
+//exo2------------------------------------
+$age = 45;
+echo $age;
+
+?><br><?php
+
+//exo3------------------------------------
+$estEtudiant = true;
+echo $estEtudiant;
+?><br><?php
+if ($estEtudiant) {
+     echo "est Etudiant";
+}
+
+?><br><?php
+
+//exo4------------------------------------
+$taille = "177";
+echo $taille.'cm';
+
+?><br><?php
+
+//exo5------------------------------------
+$prix = 50;
+echo number_format($prix-0.01, 2, ',', '').'€'; 
+//number_format(nombre à formater, le nombre de décimales(qui s'arrondira au besoin), caractère utilisé comme séparateur de décimales ,caractère utilisé comme séparateur de milliers)
+
+?><br><?php
+
+//exo6------------------------------------
+$phrase = "Tout roule, no problème";
+echo strlen($phrase); // les lettre avec accent compte pour 2
+?><br><?php
+//vérifier si une chaîne de caractères est vide ou non :
+if (strlen($phrase) > 0) {
+     echo 'la phrase existe, elle est bien: '.$phrase;
+} else {
+     echo 'la phrase n\'existe pas';
+}
+
+?><br><?php
+
+//exo7------------------------------------
+//avec la variable du 6 
+echo substr($phrase, 0, 10); 
+//($phrase, 0, 10) indique le début et la fin - donc 0, 1 pour l'énoncé
+//($phrase, 12) indique les 12 premiers carractères à retirer
+
+?><br><?php
+
+//exo8------------------------------------
+$nombre = 42;
+echo $nombre.' au carré est égal à '.$nombre ** 2;
+
+?><br><?php
+
+//exo9------------------------------------
+$nbr1 = 11;
+$nbr2 = 12;
+echo 'la somme de '.$nbr1.' et de '.$nbr2.' est: '.($nbr1+$nbr2); 
+
+?><br><?php
+//exo10-----------------------------------
+$animal = 'Toto';
+echo strtoupper($animal);
+?>
+
 </body>
 </html>

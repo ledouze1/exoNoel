@@ -50,5 +50,34 @@
     18) Créer une méthode "getPersonneByAgeOrSolde" à la classe "Banque" qui permet de récupérer une instance de la classe "Personne" à partir de son âge ou de son solde du compte.
 
 -->
+
+<?php
+
+include "./personne.php";
+include "./comptebanquaire.php";
+
+$personne = new Personne('Toto',92);
+
+echo $personne->sePresenter();
+
+
+$compte = new CompteBancaire(2000);
+echo "Le solde du compte est de : $compte->solde<br />"; 
+$compte->deposer(500);
+echo "Le solde du compte est de : $compte->solde<br />"; 
+$compte->retirer(3000);
+echo "Le solde du compte est de : $compte->solde<br />"; // affiche le message prévu "Le montant à retirer dépasse le solde!" puis "Le solde du compte est de : ..."
+$compte->retirer(1200);
+echo "Le solde du compte est de : $compte->solde<br />"; 
+$compte->deposer(200);
+echo "Le solde du compte est de : $compte->solde<br />";
+$compte->retirer(500);
+echo "Le solde du compte est de : $compte->solde<br />"; 
+
+
+
+?>
+
+
 </body>
 </html>
